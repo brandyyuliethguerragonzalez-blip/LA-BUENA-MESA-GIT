@@ -1,0 +1,9 @@
+{
+  "name": "la-buena-mesa",
+  "version": "1.0.0",
+  "description": "Sistema de pedidos de LA BUENA MESA",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pedidos - LA BUENA MESA</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f1e9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .contenedor {
+            max-width: 450px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #754323;
+        }
+
+        h2 {
+            text-align: center;
+            color: #444;
+        }   
+      label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 7px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input, select {
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #754323;
+            color: white;
+            border: none;
+            margin-top: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .volver {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .volver a {
+            color: #754323;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>LA BUENA MESA</h1>
+        <h2>Registro de pedidos</h2>
+
+        <form action="registrarPedido" method="POST">
+
+            <label for="cliente">Nombre del cliente:</label>
+
+            <input
+                type="text"
+                id="cliente"
+                name="cliente"
+                placeholder="Escribe tu nombre"
+                required
+            >
+                        <label for="plato">Selecciona el plato:</label>
+
+            <select id="plato" name="plato_id" required>
+                <option value="">Seleccionar plato</option>
+                <option value="1">Jugo de naranja - $5.000</option>
+                <option value="2">Bandeja paisa - $25.000</option>
+                <option value="3">Flan de caramelo - $8.000</option>
+                <option value="4">Arepa con queso - $6.000</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+
+            <input
+                type="number"
+                id="cantidad"
+                name="cantidad"
+                min="1"
+                value="1"
+                required
+            >
+
+            <button type="submit">Registrar pedido</button>
+
+        </form>
+
+        <div class="volver">
+            <a href="Index.html">Volver al inicio</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
